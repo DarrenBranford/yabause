@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+b4b0c1053b4c96ee87f6f83268df231f src/CMakeFiles/m68kmake
+ede989b7eeb38846ee9f708ae0249712 src/CMakeFiles/m68kmake-complete
+fc725f381cf0a7cd8bcbcf646a72b7a4 src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-build
+cd27cd4f0390d3be65ef2e9cc8bac0e5 src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-configure
+98c6cb3226d0090a3b777409f46dc2cb src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-download
+be5c25cc4c25be983468f054c7eeacf5 src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-install
+c9c3e8c05e2bcabfff64f3079496c5ee src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-mkdir
+058480aa3c2d6255a966d715a68f963c src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-patch
+7f4cd0c2eac154fd6132aee4aa5ba656 src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-update

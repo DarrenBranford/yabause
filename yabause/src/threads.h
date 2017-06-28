@@ -94,7 +94,10 @@ void YabAddEventQueue( YabEventQueue * queue_t, int evcode );
 // YabWaitEventQueue: recive event
 int YabWaitEventQueue( YabEventQueue * queue_t );
 
+<<<<<<< HEAD
 // Declaration fixes iOS build error
+=======
+>>>>>>> devmiyax/extui
 int YaGetQueueSize(YabEventQueue * queue_t);
 
 typedef void * YabMutex;

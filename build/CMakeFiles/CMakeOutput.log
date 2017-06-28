@@ -1,0 +1,180 @@
+The target system is: Darwin - 1 - 
+The host system is: Darwin - 16.6.0 - x86_64
+Determining if the function gettimeofday exists passed with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_84959/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_84959.dir/build.make CMakeFiles/cmTC_84959.dir/build
+Building C object CMakeFiles/cmTC_84959.dir/CheckFunctionExists.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DCHECK_FUNCTION_EXISTS=gettimeofday -arch arm64   -o CMakeFiles/cmTC_84959.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.6.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_84959
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84959.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DCHECK_FUNCTION_EXISTS=gettimeofday -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_84959.dir/CheckFunctionExists.c.o  -o cmTC_84959  
+
+
+Determining if the function floorf exists passed with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_98965/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_98965.dir/build.make CMakeFiles/cmTC_98965.dir/build
+Building C object CMakeFiles/cmTC_98965.dir/CheckFunctionExists.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DCHECK_FUNCTION_EXISTS=floorf -arch arm64   -o CMakeFiles/cmTC_98965.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.6.2/share/cmake/Modules/CheckFunctionExists.c
+/usr/local/Cellar/cmake/3.6.2/share/cmake/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'floorf' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS();
+  ^
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS floorf
+                              ^
+/usr/local/Cellar/cmake/3.6.2/share/cmake/Modules/CheckFunctionExists.c:7:3: note: 'floorf' is a builtin with type 'float (float)'
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS floorf
+                              ^
+1 warning generated.
+Linking C executable cmTC_98965
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98965.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DCHECK_FUNCTION_EXISTS=floorf -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_98965.dir/CheckFunctionExists.c.o  -o cmTC_98965  -lm 
+
+
+Determining if the function strcasecmp exists passed with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fb700/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_fb700.dir/build.make CMakeFiles/cmTC_fb700.dir/build
+Building C object CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DCHECK_FUNCTION_EXISTS=strcasecmp -arch arm64   -o CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.6.2/share/cmake/Modules/CheckFunctionExists.c
+/usr/local/Cellar/cmake/3.6.2/share/cmake/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strcasecmp' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS();
+  ^
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS strcasecmp
+                              ^
+/usr/local/Cellar/cmake/3.6.2/share/cmake/Modules/CheckFunctionExists.c:7:3: note: 'strcasecmp' is a builtin with type 'int (const char *, const char *)'
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS strcasecmp
+                              ^
+1 warning generated.
+Linking C executable cmTC_fb700
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb700.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DCHECK_FUNCTION_EXISTS=strcasecmp -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o  -o cmTC_fb700  -lm 
+
+
+Performing C SOURCE FILE Test BSWAP16_OK succeeded with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b1bda/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b1bda.dir/build.make CMakeFiles/cmTC_b1bda.dir/build
+Building C object CMakeFiles/cmTC_b1bda.dir/src.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DBSWAP16_OK -arch arm64   -o CMakeFiles/cmTC_b1bda.dir/src.c.o   -c /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c
+/Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c:3:10: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+                return !__builtin_bswap16(0xabcd) == 0xcdab;
+                       ^                          ~~
+/Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c:3:10: note: add parentheses after the '!' to evaluate the comparison first
+                return !__builtin_bswap16(0xabcd) == 0xcdab;
+                       ^
+                        (                                  )
+/Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c:3:10: note: add parentheses around left hand side expression to silence this warning
+                return !__builtin_bswap16(0xabcd) == 0xcdab;
+                       ^
+                       (                         )
+1 warning generated.
+Linking C executable cmTC_b1bda
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1bda.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DBSWAP16_OK -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b1bda.dir/src.c.o  -o cmTC_b1bda  -lm 
+
+Source file was:
+
+	int main(void) {
+		return !__builtin_bswap16(0xabcd) == 0xcdab;
+	}
+	
+Performing C SOURCE FILE Test BSWAP32_OK succeeded with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6f9ca/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_6f9ca.dir/build.make CMakeFiles/cmTC_6f9ca.dir/build
+Building C object CMakeFiles/cmTC_6f9ca.dir/src.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DBSWAP32_OK -arch arm64   -o CMakeFiles/cmTC_6f9ca.dir/src.c.o   -c /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c
+/Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c:3:10: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+                return !__builtin_bswap32(0xdeadbeef) == 0xefbeadde;
+                       ^                              ~~
+/Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c:3:10: note: add parentheses after the '!' to evaluate the comparison first
+                return !__builtin_bswap32(0xdeadbeef) == 0xefbeadde;
+                       ^
+                        (                                          )
+/Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/src.c:3:10: note: add parentheses around left hand side expression to silence this warning
+                return !__builtin_bswap32(0xdeadbeef) == 0xefbeadde;
+                       ^
+                       (                             )
+1 warning generated.
+Linking C executable cmTC_6f9ca
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f9ca.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -DBSWAP32_OK -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_6f9ca.dir/src.c.o  -o cmTC_6f9ca  -lm 
+
+Source file was:
+
+	int main(void) {
+		return !__builtin_bswap32(0xdeadbeef) == 0xefbeadde;
+	}
+	
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_97c46/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_97c46.dir/build.make CMakeFiles/cmTC_97c46.dir/build
+Building C object CMakeFiles/cmTC_97c46.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64   -o CMakeFiles/cmTC_97c46.dir/CheckIncludeFile.c.o   -c /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_97c46
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97c46.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_97c46.dir/CheckIncludeFile.c.o  -o cmTC_97c46  
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20ca4/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_20ca4.dir/build.make CMakeFiles/cmTC_20ca4.dir/build
+Building C object CMakeFiles/cmTC_20ca4.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64   -o CMakeFiles/cmTC_20ca4.dir/CheckIncludeFile.c.o   -c /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_20ca4
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20ca4.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_20ca4.dir/CheckIncludeFile.c.o  -o cmTC_20ca4  
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_abc2d/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_abc2d.dir/build.make CMakeFiles/cmTC_abc2d.dir/build
+Building C object CMakeFiles/cmTC_abc2d.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64   -o CMakeFiles/cmTC_abc2d.dir/CheckIncludeFile.c.o   -c /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_abc2d
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abc2d.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_abc2d.dir/CheckIncludeFile.c.o  -o cmTC_abc2d  
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e15fc/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e15fc.dir/build.make CMakeFiles/cmTC_e15fc.dir/build
+Building C object CMakeFiles/cmTC_e15fc.dir/CheckSymbolExists.c.o
+/usr/bin/gcc    -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64   -o CMakeFiles/cmTC_e15fc.dir/CheckSymbolExists.c.o   -c /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e15fc
+/usr/local/Cellar/cmake/3.6.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e15fc.dir/link.txt --verbose=1
+/usr/bin/gcc   -O3 -g -fobjc-abi-version=2 -fobjc-arc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk  -arch arm64 -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e15fc.dir/CheckSymbolExists.c.o  -o cmTC_e15fc  -lm 
+
+File /Volumes/Toshiba/Projects/yabause_personal/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

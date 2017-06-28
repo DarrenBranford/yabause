@@ -1,0 +1,51 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/CMakeFiles/m68kmake"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/CMakeFiles/m68kmake.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/CMakeFiles/m68kmake-complete.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-install.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-mkdir.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-download.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-update.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-patch.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-configure.rule"
+		},
+		
+		{
+			"file" : "/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "m68kmake" ],
+		"name" : "m68kmake"
+	}
+}

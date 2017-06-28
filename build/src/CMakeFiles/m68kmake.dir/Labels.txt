@@ -1,0 +1,13 @@
+# Target labels
+ m68kmake
+# Source files and their labels
+/Volumes/Toshiba/Projects/yabause_personal/build/src/CMakeFiles/m68kmake
+/Volumes/Toshiba/Projects/yabause_personal/build/src/CMakeFiles/m68kmake.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/CMakeFiles/m68kmake-complete.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-install.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-mkdir.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-download.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-update.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-patch.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-configure.rule
+/Volumes/Toshiba/Projects/yabause_personal/build/src/m68kmake-prefix/src/m68kmake-stamp/m68kmake-build.rule
