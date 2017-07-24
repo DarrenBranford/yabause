@@ -150,16 +150,15 @@ static INLINE void SH2HandleInterrupts(SH2_struct *context)
   {
     if (context->interrupts[context->NumberOfInterrupts - 1].level > context->regs.SR.part.I)
     {
-      //if (context->interrupts[context->NumberOfInterrupts - 1].vector != 67) {
-        u32 persr = context->regs.SR.part.I;
-        context->regs.R[15] -= 4;
-        MappedMemoryWriteLong(context->regs.R[15], context->regs.SR.all);
-        context->regs.R[15] -= 4;
-        MappedMemoryWriteLong(context->regs.R[15], context->regs.PC);
-        context->regs.SR.part.I = context->interrupts[context->NumberOfInterrupts - 1].level;
-        context->regs.PC = MappedMemoryReadLong(context->regs.VBR + (context->interrupts[context->NumberOfInterrupts - 1].vector << 2));
-        LOG("**** Exception vecnum=%u, PC=%08X PreSR=%08X,level=%08X", context->interrupts[context->NumberOfInterrupts - 1].vector, context->regs.PC, persr, context->regs.SR.part.I);
-      //}
+      u32 oldpc = context->regs.PC;
+      u32 persr = context->regs.SR.part.I;
+      context->regs.R[15] -= 4;
+      MappedMemoryWriteLong(context->regs.R[15], context->regs.SR.all);
+      context->regs.R[15] -= 4;
+      MappedMemoryWriteLong(context->regs.R[15], context->regs.PC);
+      context->regs.SR.part.I = context->interrupts[context->NumberOfInterrupts - 1].level;
+      context->regs.PC = MappedMemoryReadLong(context->regs.VBR + (context->interrupts[context->NumberOfInterrupts - 1].vector << 2));
+      LOG("[%s] Exception %u, vecnum=%u, saved PC=0x%08x --- New PC=0x%08x\n", context->isslave?"SH2-S":"SH2-M", 9, context->interrupts[context->NumberOfInterrupts - 1].vector, oldpc, context->regs.PC);
       context->NumberOfInterrupts--;
       context->isIdle = 0;
       context->isSleeping = 0;
@@ -1122,19 +1121,13 @@ static void FASTCALL SH2ldspr(SH2_struct * sh)
 
 static void FASTCALL SH2macl(SH2_struct * sh)
 {
-   u32 RnL,RnH,RmL,RmH,Res0,Res1,Res2;
-   u32 temp0,temp1,temp2,temp3;
-   s32 tempm,tempn,fnLmL;
    s32 m = INSTRUCTION_C(sh->instruction);
    s32 n = INSTRUCTION_B(sh->instruction);
-   u32 pre_macl;
-   u32 pre_mach;
-
    s32 m0, m1;
 
-   m1 = tempn = (s32) MappedMemoryReadLong(sh->regs.R[n]);
+   m1 = (s32) MappedMemoryReadLong(sh->regs.R[n]);
    sh->regs.R[n] += 4;
-   m0 = tempm = (s32) MappedMemoryReadLong(sh->regs.R[m]);
+   m0 = (s32) MappedMemoryReadLong(sh->regs.R[m]);
    sh->regs.R[m] += 4;
 
 #if 1 // fast and better
@@ -1142,12 +1135,14 @@ static void FASTCALL SH2macl(SH2_struct * sh)
    a = sh->regs.MACL | ((u64)sh->regs.MACH << 32);
    b = (s64)m0 * m1;
    sum = a+b;
-   if (sh->regs.SR.part.S == 1 && sum > 0x00007FFFFFFFFFFFULL && sum < 0xFFFF800000000000ULL)
-   {
-     if((s64)b < 0)
-       sum = 0xFFFF800000000000ULL;
-     else
-       sum = 0x00007FFFFFFFFFFFULL;
+   if (sh->regs.SR.part.S == 1) {
+     if (sum > 0x00007FFFFFFFFFFFULL && sum < 0xFFFF800000000000ULL)
+     {
+       if ((s64)b < 0)
+         sum = 0xFFFF800000000000ULL;
+       else
+         sum = 0x00007FFFFFFFFFFFULL;
+     }
    }
    sh->regs.MACL = sum; 
    sh->regs.MACH = sum >> 32;
@@ -1238,7 +1233,43 @@ static void FASTCALL SH2macl(SH2_struct * sh)
 }
 
 //////////////////////////////////////////////////////////////////////////////
+#if 1
+static void FASTCALL SH2macw(SH2_struct * sh)
+{
+  s16 m0, m1;
+  u32 templ;
+  s32 m = INSTRUCTION_C(sh->instruction);
+  s32 n = INSTRUCTION_B(sh->instruction);
 
+  m0 = (s32)MappedMemoryReadWord(sh->regs.R[m]);
+  sh->regs.R[m] += 2;
+  m1 = (s32)MappedMemoryReadWord(sh->regs.R[n]);
+  sh->regs.R[n] += 2;
+
+  s32 b = (s32)m0 * m1;
+  u64 sum = (s64)(s32)sh->regs.MACL + b;
+
+  if (sh->regs.SR.part.S == 1) {
+    if (sum > 0x000000007FFFFFFFULL && sum < 0xFFFFFFFF80000000ULL)
+    {
+      sh->regs.MACH |= 1;
+
+      if (b < 0)
+        sum = 0x80000000ULL;
+      else
+        sum = 0x7FFFFFFFULL;
+    }
+    sh->regs.MACL = sum;
+  }
+  else {
+    sh->regs.MACL = sum;
+    sh->regs.MACH = sum >> 32;
+  }
+  sh->regs.PC += 2;
+  sh->cycles += 3;
+}
+
+#else
 static void FASTCALL SH2macw(SH2_struct * sh)
 {
    s32 tempm,tempn,dest,src,ans;
@@ -1293,6 +1324,7 @@ static void FASTCALL SH2macw(SH2_struct * sh)
    sh->regs.PC+=2;
    sh->cycles += 3;
 }
+#endif
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -2862,6 +2894,28 @@ static INLINE void SH2UBCInterrupt(SH2_struct *context, u32 flag)
       LOG("interrupt successfully handled\n");
    }
    context->onchip.BRCR |= flag;
+}
+
+
+void SH2HandleBreakpoints(SH2_struct *context)
+{
+  int i;
+
+  for (i = 0; i < context->bp.numcodebreakpoints; i++) {
+
+    if ((context->regs.PC == context->bp.codebreakpoint[i].addr) && context->bp.inbreakpoint == 0) {
+      context->bp.inbreakpoint = 1;
+      SH2DumpHistory(context);
+      if (context->bp.BreakpointCallBack)
+        context->bp.BreakpointCallBack(context, context->bp.codebreakpoint[i].addr, context->bp.BreakpointUserData);
+      context->bp.inbreakpoint = 0;
+    }
+  }
+
+  if (context->bp.breaknow) {
+    context->bp.breaknow = 0;
+    context->bp.BreakpointCallBack(context, context->regs.PC, context->bp.BreakpointUserData);
+  }
 }
 
 

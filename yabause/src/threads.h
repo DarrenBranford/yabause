@@ -21,6 +21,9 @@
 #ifndef THREADS_H
 #define THREADS_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 ///////////////////////////////////////////////////////////////////////////
 // Thread constants
 ///////////////////////////////////////////////////////////////////////////
@@ -93,10 +96,14 @@ void YabAddEventQueue( YabEventQueue * queue_t, int evcode );
 
 // YabWaitEventQueue: recive event
 int YabWaitEventQueue( YabEventQueue * queue_t );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Declaration fixes iOS build error
 =======
+>>>>>>> devmiyax/extui
+=======
+ 
 >>>>>>> devmiyax/extui
 int YaGetQueueSize(YabEventQueue * queue_t);
 
@@ -113,5 +120,9 @@ int YabThreadGetCurrentThreadAffinityMask();
 void YabThreadUSleep( unsigned int stime );
 
 ///////////////////////////////////////////////////////////////////////////
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // THREADS_H
